@@ -23,9 +23,9 @@
 @each $type, $color in $button-types {
     .#{$type}{
         background-color: $color;
-        transition: 0.3s ease-in-out;
+        transition: 0.5s ease-in-out;
         &:hover{
-            background-color:darken($color, 20%);
+            background-color:lighten($color, 15%);
         }
     }
 
