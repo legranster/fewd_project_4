@@ -19,4 +19,10 @@ $break: 768px;
 $max-width: 1400px;
 
 //button type list --------------//
-$button-types: ('default','error','info','success','warning');
+$button-types: (
+    'default':$color-default,
+    'error':$color-error,
+    'info':$color-info,
+    'success':$color-success,
+    'warning':$color-warning,
+);

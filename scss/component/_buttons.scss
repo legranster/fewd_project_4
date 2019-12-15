@@ -20,47 +20,13 @@
     }
 }
 
-// @each $type in $button-types {
-//     .#{$type}{
-//         background-color: $color-#{$type};
-//     }
-// }
-//todo: make a for-loop here 
-.default {
-    background-color: $color-default;
-    transition: 0.3s ease-in-out;
-    &:hover {
-        background-color: darken($color-default, 20%);
+@each $type, $color in $button-types {
+    .#{$type}{
+        background-color: $color;
+        transition: 0.3s ease-in-out;
+        &:hover{
+            background-color:darken($color, 20%);
+        }
     }
-}
-.error {
-    background-color: $color-error;
-    transition: 0.3s ease-in-out;
-    &:hover {
-        background-color: darken($color-error, 20%);
-    }
-}
 
-.info {
-    background-color: $color-info;
-    transition: 0.3s ease-in-out;
-    &:hover {
-        background-color: darken($color-info, 20%);
-    }
-}
-
-.success {
-    background-color: $color-success;
-    transition: 0.3s ease-in-out;
-    &:hover {
-        background-color: darken($color-success, 20%);
-    }
-}
-
-.warning {
-    background-color: $color-warning;
-    transition: 0.3s ease-in-out;
-    &:hover {
-        background-color: darken($color-warning, 20%);
-    }
 }
