@@ -10,32 +10,57 @@
     padding: 10px 0;
     text-transform: uppercase;
     border-radius: 5px;
-    @media (min-width: $break){
+    @include mobile-break{
         padding: 10px 30px;
     }
     &+.btn{
-        @media(min-width: $break){
+        @include mobile-break{
             margin-left: 10px;
         }
     }
 }
 
+// @each $type in $button-types {
+//     .#{$type}{
+//         background-color: $color-#{$type};
+//     }
+// }
 //todo: make a for-loop here 
 .default {
     background-color: $color-default;
+    transition: 0.3s ease-in-out;
+    &:hover {
+        background-color: darken($color-default, 20%);
+    }
 }
 .error {
     background-color: $color-error;
+    transition: 0.3s ease-in-out;
+    &:hover {
+        background-color: darken($color-error, 20%);
+    }
 }
 
 .info {
     background-color: $color-info;
+    transition: 0.3s ease-in-out;
+    &:hover {
+        background-color: darken($color-info, 20%);
+    }
 }
 
 .success {
     background-color: $color-success;
+    transition: 0.3s ease-in-out;
+    &:hover {
+        background-color: darken($color-success, 20%);
+    }
 }
 
 .warning {
     background-color: $color-warning;
+    transition: 0.3s ease-in-out;
+    &:hover {
+        background-color: darken($color-warning, 20%);
+    }
 }

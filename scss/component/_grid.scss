@@ -5,16 +5,16 @@
 
 .container {
     padding: 0 10px;
-    @media (min-width: $break) {
-          max-width: $max-width;
-          display: block;
-          margin-left: auto;
-          margin-right: auto;
+    @include mobile-break{
+        max-width: $max-width;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
 .centered {
-    @media (min-width: $break) {
+    @include mobile-break{
       display: block;
       margin-left: auto;
       margin-right: auto;
@@ -25,7 +25,7 @@
     display: flex;
     flex-direction: column;
     padding: 1em 10px;
-    @media (min-width: $break) {
+    @include mobile-break{
         flex-direction: row;
     }   
 }
@@ -36,19 +36,20 @@
     min-height: 25px;
     padding: 10px;
     border-radius: 5px;
-    @media (min-width: $break) {
+    @include mobile-break{
         display: flex;
         justify-content: center;
         margin-top: 0;
         align-items: center;
     }
     &+ [class^=col] {
-        @media (min-width: $break) {    
+        @include mobile-break{  
             margin-left: 10px;
         }
     }
 }
 
+//todo maybe a loop here 
 .theme.col-1 {
     background-color: #927bc1;
 }
